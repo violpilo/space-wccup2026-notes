@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于世界杯 · 简明指南与访问提醒</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fff5e6 0%, #ffe6cc 40%, #fde4c8 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      line-height: 1.7;
+      color: #2e241b;
+    }
+
+    .card {
+      max-width: 780px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 40px;
+      padding: 2.8rem 2.5rem;
+      box-shadow: 0 20px 40px -12px rgba(180, 110, 50, 0.18), 0 4px 18px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s ease;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 2rem 1.4rem;
+        border-radius: 28px;
+      }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #4a2f1e;
+      margin-bottom: 0.25rem;
+      line-height: 1.2;
+    }
+
+    .subhead {
+      font-size: 1.05rem;
+      color: #8a6f58;
+      border-left: 4px solid #e6b88a;
+      padding-left: 1rem;
+      margin: 0.5rem 0 1.8rem 0;
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      background: #f9f2ea;
+      padding: 1.2rem 1.6rem;
+      border-radius: 24px;
+      margin-bottom: 2rem;
+      color: #3d2c1e;
+      font-weight: 420;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin-top: 2.2rem;
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+      color: #593f2b;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+    }
+
+    .highlight-link {
+      display: inline-block;
+      background: #f7e9de;
+      padding: 0 8px 0 8px;
+      border-radius: 40px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #8f532c;
+      transition: all 0.2s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    .highlight-link:hover {
+      background: #ecd5bf;
+      border-bottom-color: #b5723d;
+    }
+
+    blockquote {
+      background: #f3e7dc;
+      padding: 1.2rem 1.8rem;
+      border-radius: 30px;
+      margin: 1.8rem 0;
+      font-style: normal;
+      border-left: 4px solid #dba87a;
+      color: #3d2c1e;
+      font-size: 0.98rem;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .faq-summary {
+      background: #fcf7f2;
+      border-radius: 28px;
+      padding: 1.4rem 1.8rem;
+      margin: 2rem 0 1rem;
+    }
+
+    .faq-summary details {
+      margin-bottom: 0.6rem;
+    }
+
+    .faq-summary summary {
+      font-weight: 520;
+      cursor: pointer;
+      color: #4d3525;
+      padding: 0.4rem 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .faq-summary summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-summary summary::before {
+      content: "▸";
+      color: #c2855a;
+      font-size: 1.2rem;
+      transition: transform 0.2s;
+    }
+
+    .faq-summary details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    .faq-summary p {
+      margin: 0.5rem 0 0.6rem 1.5rem;
+      color: #5d4735;
+      font-size: 0.95rem;
+    }
+
+    .reminder {
+      background: #ffeede;
+      border-radius: 30px;
+      padding: 1.2rem 1.8rem;
+      margin-top: 2rem;
+      font-size: 0.98rem;
+      border: 1px solid #eedbc8;
+    }
+
+    .reminder strong {
+      color: #754e2f;
+    }
+
+    .footer-note {
+      margin-top: 2.6rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e7d6c7;
+      font-size: 0.9rem;
+      color: #7a624e;
+      text-align: center;
+    }
+
+    a {
+      color: #895f3f;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #dbb594;
+    }
+
+    a:hover {
+      color: #a85f2b;
+    }
+
+    .btn-link {
+      display: inline-block;
+      background: #ffffff;
+      border: 1.5px solid #dbb594;
+      border-radius: 60px;
+      padding: 0.3rem 1.2rem;
+      font-weight: 460;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      text-decoration: none;
+      margin: 0 0.2rem;
+    }
+
+    .btn-link:hover {
+      background: #f5e4d4;
+      border-color: #b37a52;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px dashed #e1ccb9;
+      margin: 2.2rem 0 1.6rem;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <h1>世界杯 · 简明指南</h1>
+  <div class="subhead">从了解赛场到优雅访问，一篇温和的备忘</div>
+
+  <div class="intro">
+    <strong>关于这个页面</strong> —— 无论你是初次关注还是想重温节奏，这里没有浮夸的标语，只有几段实在的梳理。<br>
+    我们聊聊赛程结构、观赛场景，以及如何顺畅地找到属于你的 <a href="https://space-wccup2026.com" class="highlight-link">世界杯</a> 信息。
+  </div>
+
+  <p>
+    每一届赛事都像一次短途旅行：有节奏、有休息日、有冷门和经典。对于大多数人来说，提前知道比赛阶段、时区差和直播平台，就已经能让体验舒服一半。不必记住所有球队，挑两三个喜欢的队伍跟随就好。
+  </p>
+
+  <h2>⚽ 赛事节奏与观察角度</h2>
+  <p>
+    小组赛阶段通常最密集，每天三到四场，适合泛览。淘汰赛之后，每场都像一个小型故事。很多人发现，追着看几场完整比赛比刷集锦更有沉浸感。如果你的时间有限，可以重点看周末场次，或者用回放功能。
+  </p>
+
+  <blockquote>
+    “最好的观赛方式，是关掉弹幕，倒一杯茶，把注意力完全交给球场上的二十二个人。”<br>
+    <span style="font-size:0.88rem; display: block; margin-top: 6px; opacity: 0.75;">—— 一位看了四届的球迷</span>
+  </blockquote>
+
+  <h2>📅 提前确认的几件小事</h2>
+  <p>
+    赛历通常在开赛前六个月发布完整版。建议把开幕式、半决赛和决赛的日期标记在你常用的日历上。另外，留意自己所在城市与主办地的时差——很多精彩对决发生在凌晨，提前规划睡眠比硬撑更明智。
+  </p>
+
+  <p>
+    如果你是和朋友一起看，可以轮流准备零食和饮料。小小的仪式感会让人对赛程多一分期待。关于更细致的赛程与球队动态，可以直接查看 <a href="https://space-wccup2026.com" class="btn-link">世界杯</a> 的官方信息板块，那里更新比较及时。
+  </p>
+
+  <div class="faq-summary">
+    <h3 style="font-size:1.1rem; margin:0 0 0.8rem 0; font-weight:500; color:#593f2b;">❓ 几个常见疑问</h3>
+    <details>
+      <summary>小组出线规则复杂吗？</summary>
+      <p>每组四队，前两名晋级。积分、净胜球、进球数依次比较，若依然平手则看相互战绩。整体来说，赢球是最稳妥的路。不用记太多细节，直播时解说通常会讲清楚。</p>
+    </details>
+    <details>
+      <summary>哪里可以看回放？</summary>
+      <p>大多数持权转播商都提供72小时内回放。如果错过直播，不妨在第二天早上用早餐时间补上，避免被剧透。</p>
+    </details>
+    <details>
+      <summary>需要提前注册账号吗？</summary>
+      <p>部分平台要求免费注册才能观看高清直播或回放。建议至少提前一周完成注册、测试网络和设备，省得开赛前手忙脚乱。</p>
+    </details>
+  </div>
+
+  <hr>
+
+  <h2>🧭 访问提醒 · 保持顺畅</h2>
+  <p>
+    在赛事期间，官方网站和流媒体平台可能会因瞬时流量而变慢。这里有一条朴素的建议：尽量避开开球前五分钟的刷新高峰。提前十分钟进入页面或客户端，通常能避开拥堵。
+  </p>
+
+  <div class="reminder">
+    <strong>📌 特别提示</strong>：如果你打算在手机或平板上观看，请提前关闭后台自动更新和下载任务。另外，确认你的网络套餐是否包含足够流量，或者提前连接稳定的 Wi-Fi。把设备充好电，静音通知——然后享受比赛。
+  </div>
+
+  <p style="margin-top: 1.6rem;">
+    假如你对某支球队的阵容或者裁判安排有疑问，可以去 <a href="https://space-wccup2026.com" class="highlight-link">世界杯</a> 的资讯区查找官方简报。那里的信息经过核实，比社交网络上的传言靠谱得多。
+  </p>
+
+  <div class="footer-note">
+    保持简单，看球愉快。<br>
+    本页面仅为个人整理，不构成任何官方意见。
+  </div>
+</div>
+</body>
+</html>
